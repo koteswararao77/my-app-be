@@ -5,7 +5,7 @@ require("dotenv").config();
 const connectDB = mongoose.createConnection(process.env.MONGO_URI);
 
 // ChatBot Database
-const chatBotDB = mongoose.createConnection(process.env.MONGO_CHATBOT_URI);
+const chatBotDB = mongoose.createConnection(process.env.MONGO_AIBOT_URI);
 
 // loginform
 const loginFormDB = mongoose.createConnection(process.env.MONGO_URI_LOGIN)
