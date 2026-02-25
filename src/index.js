@@ -12,10 +12,18 @@ const logger = require("./utils/logger");
 
 const app = express();
 
-app.use(cors());
 app.use(express.json());
 app.use(errorHandler);
 app.use(logger);
+
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://koteswararao77.github.io"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 // Routes
 app.use("/api", userRoutes);
