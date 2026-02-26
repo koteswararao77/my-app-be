@@ -31,8 +31,6 @@ app.use("/api/auth", loginRoutes);
 
 const PORT = process.env.PORT || 5000;
 
-console.log("ChatBot URI:", process.env.MONGO_AIBOT_URI);
-
 app.get("/", (req, res) => {
   res.send("Backend is running 🚀");
 });

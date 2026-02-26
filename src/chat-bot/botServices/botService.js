@@ -6,8 +6,6 @@ const openai = new OpenAI({
     baseURL: "https://api.groq.com/openai/v1",
 });
 
-console.log("GROQ KEY EXISTS:", !!process.env.GROQ_API_KEY);
-
 exports.sendMessage = async (userId, text) => {
     try {
 
