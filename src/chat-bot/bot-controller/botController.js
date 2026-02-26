@@ -4,9 +4,6 @@ const asyncHandler = require("../../utils/asyncHandler");
 exports.sendMessage = asyncHandler(async (req, res) => {
   const { userId, text } = req.body;
 
-  console.log("📩 ChatBot API hit");
-  console.log("Body:", req.body);
-
   if (!userId || !text) {
     return res.status(400).json({
       message: "userId and text are required",
